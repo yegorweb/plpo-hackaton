@@ -1,16 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineProps({
   msg: String,
-})
+});
 
-const count = ref(0)
-if(ref==100){
-  alert('aboba')
+const count = ref(0);
+if (count.value == 100) {
+  alert("aboba");
 }
-if(ref==1000){
-  alert('gg wp')
+if (count.value == 100) {
+  alert("gg wp");
 }
 </script>
 
@@ -27,8 +27,7 @@ if(ref==1000){
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a
     >, the official Vue + Vite starter
   </p>
   <p>
