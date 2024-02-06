@@ -6,6 +6,12 @@ defineProps({
 })
 
 const count = ref(0)
+if(ref==100){
+  alert('aboba')
+}
+if(ref==1000){
+  alert('gg wp')
+}
 </script>
 
 <template>
