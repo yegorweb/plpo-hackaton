@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  
+  axwaxawxawxawx
 </template>
 
 <style scoped>
