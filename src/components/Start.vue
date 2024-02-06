@@ -2,7 +2,9 @@
 
 </script>
 <template>
-ds
+<v-row justify="center">
+<v-col :span="1">sus</v-col>
+</v-row>
 </template>
 <style scoped>
 </style>
