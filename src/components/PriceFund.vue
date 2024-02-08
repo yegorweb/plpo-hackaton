@@ -3,7 +3,9 @@
 </script>
 <template>
 <v-row>
-<v-col></v-col>
+<v-col>
+<div>10000000000$ за плакат</div>
+</v-col>
 </v-row>
 </template>
 <style scoped>

@@ -1,10 +1,11 @@
 <script setup>
-
+import StartSvgImg from "../svg/StartSvgImg.svg";
 </script>
 <template>
-<v-row justify="center">
-<v-col :span="1">sus</v-col>
-</v-row>
+  <v-row>
+    <v-col>
+      <StartSvgImg></StartSvgImg>
+    </v-col>
+  </v-row>
 </template>
-<style scoped>
-</style>
+<style scoped></style>

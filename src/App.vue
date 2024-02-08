@@ -1,5 +1,5 @@
 <script setup>
-import Landing from './pages/Landing.vue';
+import Landing from '../src/pages/Landing.vue';
 </script>
 
 <template>
