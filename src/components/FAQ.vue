@@ -2,16 +2,16 @@
 
 </script>
 <template>
-    <v-row class="rules">
+    <v-row class="rules" :cols="6">
         <v-col>
-            <div>10000000000$ за плакат</div>
+        Факю
         </v-col>
     </v-row>
 </template>
 <style scoped>
 .rules {
     width: 100%;
-    height: 50px;
-    background-color:wheat;
+    height: 300px;
+    background-color:deeppink;
 }
 </style>

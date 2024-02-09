@@ -2,8 +2,16 @@
 
 </script>
 <template>
-<v-row>
-<v-col></v-col></v-row>
+    <v-row class="rules">
+        <v-col>
+        регру
+        </v-col>
+    </v-row>
 </template>
 <style scoped>
+.rules {
+    width: 100%;
+    height: 200px;
+    background-color:blue;
+}
 </style>
