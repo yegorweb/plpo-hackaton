@@ -6,4 +6,6 @@ import Landing from '../src/pages/Landing.vue';
   <Landing></Landing>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
