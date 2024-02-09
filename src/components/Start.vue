@@ -1,5 +1,5 @@
 <script setup>
-import StartSvgImg from "../svg/StartSvgImg.svg";
+import StartSvgImg from "../svg/StartSvgImg.vue";
 </script>
 <template>
   <v-row>

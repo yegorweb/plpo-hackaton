@@ -2,8 +2,9 @@
 
 </script>
 <template>
-<v-row>
-<v-col></v-col></v-row>
+    <v-row>
+        <v-col>
+        </v-col>
+    </v-row>
 </template>
-<style scoped>
-</style>
+<style scoped></style>
