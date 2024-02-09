@@ -8,4 +8,5 @@ import StartSvgImg from "../svg/StartSvgImg.vue";
     </v-col>
   </v-row>
 </template>
-<style scoped></style>
+<style scoped>
+</style>

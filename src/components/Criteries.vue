@@ -2,10 +2,16 @@
 
 </script>
 <template>
-    <v-row>
+    <v-row class="rules">
         <v-col>
-            dfsfds
+            Криты
         </v-col>
     </v-row>
 </template>
-<style scoped></style>
+<style scoped>
+.rules {
+    width: 50%;
+    height: 200px;
+    background-color:cornflowerblue;
+}
+</style>
