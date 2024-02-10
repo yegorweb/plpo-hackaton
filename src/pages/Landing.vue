@@ -1,6 +1,7 @@
 <script setup>
 import Start from '../components/Start.vue';
 import Timeline from '../components/Timeline.vue'
+import Posters from '../components/Posters.vue'
 import PriceFund from "../components/PriceFund.vue";
 import Criteries from "../components/Criteries.vue";
 import Rules from "../components/Rules.vue";
@@ -13,6 +14,7 @@ import AboutPLPO from "../components/AboutPLPO.vue";
 </script>
 <template>
     <Start></Start>
+    <Posters></Posters>
     <Timeline></Timeline>
     <PriceFund></PriceFund>
     <Criteries></Criteries>
