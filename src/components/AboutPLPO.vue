@@ -10,7 +10,6 @@
 </template>
 <style scoped>
 .rules {
-    width: 50%;
     height: 100px;
     background-color:burlywood;
 }

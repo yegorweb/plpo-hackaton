@@ -1,5 +1,4 @@
 <script setup>
-
 </script>
 <template>
     <v-row class="d-flex justify-center">
@@ -15,8 +14,8 @@
 </template>
 <style scoped>
 .rules {
-    width: 100%;
-    height: 200px;
+    height: 800px;
     background-color:blue;
+    transform: scale(1,1);
 }
 </style>
