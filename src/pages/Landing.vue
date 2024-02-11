@@ -11,47 +11,6 @@ import Footer from "../components/Footer.vue";
 import ForWho from "../components/ForWho.vue";
 import Reg from "../components/Reg.vue";
 import AboutPLPO from "../components/AboutPLPO.vue";
-import { ref, onMounted, watch, computed } from 'vue'
-import { useScroll } from '@vueuse/core'
-const el = ref < HTMLElement | null > (null)
-const { x, y } = useScroll(document.body)
-
-const displayX = computed({
-    get() {
-        return x.value.toFixed(1)
-    },
-    set(val) {
-        x.value = Number.parseFloat(val)
-    },
-})
-const displayY = computed({
-    get() {
-        return y.value.toFixed(1)
-    },
-    set(val) {
-        y.value = Number.parseFloat(val)
-    },
-})
-console.log(displayX, displayY)
-// let handleScroll = async () => {
-//   let triggerHeight = body.scrollTop + body.offsetHeight + 5
-// console.log(triggerHeight)
-//   if (triggerHeight >= 200) {
-//     console.log('sus')
-//   }
-//   if (triggerHeight >= body.scrollHeight) {
-//     triggerHeight = body.scrollHeight
-//   }
-//   if (triggerHeight == document.body.scrollHeight) {
-//     await posterStore.fetchPosters(posterStore.filter)
-//   }
-// }
-// onMounted(async () => {
-//     window.addEventListener('scroll', function () {
-//   const scrollPosition = window.scrollY;
-//   console.log(scrollPosition);
-// });
-// })
 </script>
 <template ref="el" class="wrapper" style="overflow-x: hidden;">
     <Start></Start>

@@ -2,14 +2,14 @@
 
 </script>
 <template>
-    <v-row class="rules">
+    <v-row class="plpo">
         <v-col>
         ПЛПО
         </v-col>
     </v-row>
 </template>
 <style scoped>
-.rules {
+.plpo {
     height: 100px;
     background-color:burlywood;
 }

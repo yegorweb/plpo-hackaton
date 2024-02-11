@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="rules">
+    <div class="footer">
             <h1>Футер</h1>
             <h1>Футер</h1>
             <h1>Футер</h1>
@@ -10,8 +10,8 @@
         </div>
 </template>
 <style scoped>
-.rules {
-    height: 200px;
+.footer {
+    height: 300px;
     background-color:olive;
 }
 </style>
