@@ -2,7 +2,7 @@
 import Start from '../components/Start.vue';
 import Timeline from '../components/Timeline.vue'
 import Posters from '../components/Posters.vue'
-import PriceFund from "../components/PriceFund.vue";
+import PrizeFund from "../components/PrizeFund.vue";
 import Criteries from "../components/Criteries.vue";
 import Rules from "../components/Rules.vue";
 import Contacts from "../components/Contacts.vue";
@@ -14,8 +14,9 @@ import AboutPLPO from "../components/AboutPLPO.vue";
 </script>
 <template ref="el" class="wrapper" style="overflow-x: hidden;">
     <Start></Start>
+    <Posters/>
     <Timeline></Timeline>
-    <PriceFund></PriceFund>
+    <PrizeFund></PrizeFund>
     <v-row class="pa-8">
         <v-col cols="12" md="6" class="pa-0 ma-0 rules-col">
             <Rules />
