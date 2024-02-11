@@ -30,8 +30,8 @@ import AboutPLPO from "../components/AboutPLPO.vue";
     <Contacts></Contacts>
     <FAQ></FAQ>
     <ForWho></ForWho>
-    <AboutPLPO></AboutPLPO>
     <Reg></Reg>
+    <AboutPLPO></AboutPLPO>
     <Footer></Footer>
 </template>
 <style scoped>
