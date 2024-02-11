@@ -11,9 +11,9 @@ import Footer from "../components/Footer.vue";
 import ForWho from "../components/ForWho.vue";
 import Reg from "../components/Reg.vue";
 import AboutPLPO from "../components/AboutPLPO.vue";
-import { ref, onMounted, watch,computed } from 'vue'
+import { ref, onMounted, watch, computed } from 'vue'
 import { useScroll } from '@vueuse/core'
-const el = ref<HTMLElement | null>(null)
+const el = ref < HTMLElement | null > (null)
 const { x, y } = useScroll(document.body)
 
 const displayX = computed({
@@ -32,7 +32,7 @@ const displayY = computed({
         y.value = Number.parseFloat(val)
     },
 })
-console.log(displayX,displayY)
+console.log(displayX, displayY)
 // let handleScroll = async () => {
 //   let triggerHeight = body.scrollTop + body.offsetHeight + 5
 // console.log(triggerHeight)
@@ -54,26 +54,39 @@ console.log(displayX,displayY)
 // })
 </script>
 <template ref="el" class="wrapper" style="overflow-x: hidden;">
-    
-        <Start></Start>
-        <Timeline></Timeline>
-        <PriceFund></PriceFund>
-        <Criteries></Criteries>
-        <Rules></Rules>
-        <Contacts></Contacts>
-        <FAQ></FAQ>
-        <ForWho></ForWho>
-        <AboutPLPO></AboutPLPO>
-        <Reg></Reg>
-        <Footer></Footer>
+    <Start></Start>
+    <Timeline></Timeline>
+    <PriceFund></PriceFund>
+    <v-row class="pa-8">
+        <v-col cols="12" md="6" class="pa-0 ma-0 rules-col">
+            <Rules />
+        </v-col>
+        <v-col cols="12" md="6" class="pa-0 ma-0 criteries-col">
+            <Criteries />
+        </v-col>
+    </v-row>
+
+
+    <Contacts></Contacts>
+    <FAQ></FAQ>
+    <ForWho></ForWho>
+    <AboutPLPO></AboutPLPO>
+    <Reg></Reg>
+    <Footer></Footer>
 </template>
 <style scoped>
 body {
-  height: 90dvh;
-  overflow: auto;
+    height: 90dvh;
+    overflow: auto;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.rules-col{
+    transform: rotate(-3deg);
+}
+.criteries-col{
+    transform: rotate(1deg); 
 }
 </style>
