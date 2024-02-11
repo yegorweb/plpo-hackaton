@@ -49,28 +49,52 @@ onMounted(() => {
 
     let tl = gsap.timeline()
     tl.to('.one', {
-        motionPath: { path: 'M573 260C240.69 222.261 104.213 172.094 1 1', align: 'self' },
-        scale: 3
+        motionPath: {
+            // path: 'M2.49965 1.00003C-8.58625 208.317 348.639 216.895 1111.5 212',
+            path: [{ x: width.value / 4, y: height.value / 8 }, { x: width.value / 2, y: height.value / 4 }],
+            align: 'self',
+            curviness: 2,
+        },
+        scale: 3,
+        opacity: 0,
     }, '0');
-    tl.to('.two', {
-        motionPath: { path: 'M1 260C333.31 222.261 469.787 172.094 573 1', align: 'self' },
-        scale: 3
-    }, '0');
-    tl.to('.three', {
-        motionPath: { path: 'M573 1C240.69 38.7389 104.213 88.9059 1 260', align: 'self' },
-        scale: 3
-    }, '0');
-    tl.to('.four', {
-        motionPath: { path: 'M1 1C333.31 38.7389 469.787 88.9059 573 260', align: 'self' },
-        scale: 3
-    }, '0')
+    // tl.to('.two', {
+    //     motionPath: {
+    //         // path: 'M32.5004 1.5C-100 345 242 258 197.5 740',
+    //         // path: [{ x: }]
+    //         align: 'self',
+    //         curviness: 2,
+    //     },
+    //     scale: 3,
+    //     opacity: 0
+    // }, '0');
+    // tl.to('.three', {
+    //     motionPath: { path: 'M1 590.5C528.186 406.338 672.84 286.149 756.5 0.5', align: 'self' },
+    //     scale: 3,
+    //     opacity: 0
+    // }, '0');
+    // tl.to('.four', {
+    //     motionPath: { path: 'M962.5 587.5C883.212 399.073 576.063 257.558 1.5 1.5', align: 'self' },
+    //     scale: 3,
+    //     opacity: 0
+    // }, '0')
+    // tl.to('.five', {
+    //     motionPath: { path: 'M546.5 2C968.329 418.51 317.348 380.629 0.5 457', align: 'self' },
+    //     scale: 3,
+    //     opacity: 0
+    // }, '0')
+    // tl.to('.six', {
+    //     motionPath: { path: 'M304 1018.5C149 986 186.5 407.5 2 1.5', align: 'self' },
+    //     scale: 3,
+    //     opacity: 0
+    // }, '0')
 
     ScrollTrigger.create({
         animation: tl,
         trigger: '.poster-container',
         start: '-=25%',
-        end: '+=25%',
-        scrub: 1.5,
+        end: '+=140%',
+        scrub: 1.2,
         pin: true,
         anticipatePin: 1,
     })
@@ -172,8 +196,6 @@ onMounted(() => {
 
     .row {
         width: 100%;
-        // display: flex;
-        // justify-content: center;
     }
 }
 </style>
