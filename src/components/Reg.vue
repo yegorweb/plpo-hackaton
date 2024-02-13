@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <v-row class="d-flex justify-center">
+    <v-row class="d-flex justify-center reg">
         <v-col cols='4'>
             <h1>Регистрация</h1>
             <v-form class="mt-2">
@@ -10,6 +10,10 @@
                 <v-btn type="submit" class="btn btn-lg btn-dark btn-block">отправить</v-btn>
             </v-form>
     </v-col>
-</v-row></template>
+</v-row>
+</template>
 <style scoped>
+.reg{
+    background-color: aliceblue;
+}
 </style>

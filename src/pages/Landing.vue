@@ -32,16 +32,11 @@ import AboutPLPO from "../components/AboutPLPO.vue";
     <ForWho></ForWho>
     <Reg></Reg>
     <AboutPLPO></AboutPLPO>
-    <Footer></Footer>
+    <Footer class="position_footer"></Footer>
 </template>
 <style scoped>
-body {
-    height: 90dvh;
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
+.position_footer{
+    z-index: -1;
 }
 .rules-col{
     transform: rotate(-3deg);
