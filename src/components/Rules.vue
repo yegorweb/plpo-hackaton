@@ -2,16 +2,15 @@
 
 </script>
 <template>
-    <v-row class="rules">
-        <v-col>
-        Правила
-    </v-col>
-    </v-row>
+    <div class="rules">
+        <h1 class="text-center">Правила</h1>
+    </div>
 </template>
 <style scoped>
 .rules {
-    width: 100%;
+ 
     height: 100px;
-    background-color: rgb(54, 131, 105);
+    color: #EAEAC3;
+    background-color: #676947;
 }
 </style>

@@ -2,16 +2,16 @@
 
 </script>
 <template>
-    <v-row class="rules">
-        <v-col>
-            Футер
-        </v-col>
-    </v-row>
+    <div class="footer">
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+        </div>
 </template>
 <style scoped>
-.rules {
-    width: 100%;
-    height: 200px;
-    background-color:fuchsia;
+.footer {
+    height: 300px;
+    background-color:olive;
 }
 </style>

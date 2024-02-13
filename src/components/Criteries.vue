@@ -2,16 +2,14 @@
 
 </script>
 <template>
-    <v-row class="rules">
-        <v-col>
-            Криты
-        </v-col>
-    </v-row>
+   <div class="rules">
+        <h1 class="text-center">Критерии</h1>
+    </div>
 </template>
 <style scoped>
 .rules {
-    width: 50%;
-    height: 200px;
-    background-color:cornflowerblue;
+  color: #EAEAC3;
+  height: 100px;
+    background-color:#F90007;
 }
 </style>
