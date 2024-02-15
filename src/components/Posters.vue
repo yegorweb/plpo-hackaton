@@ -141,6 +141,12 @@ onMounted(() => {
 })
 </script>
 <template>
+    <div class="first-message">
+        <span>
+            Готовы сделать нам постер за 20 тысяч рублей? Офигенная сделка, не правда ли? Вот бы кто хакатон по веб
+            разработке в Глазове провёл, мы бы там всех сделали.
+        </span>
+    </div>
     <div class="poster-container">
         <div class="row">
             <div class="poster one" ref="one">
@@ -246,8 +252,6 @@ onMounted(() => {
     width: 100%;
     position: absolute;
     top: 25%;
-    font-weight: 600;
-    font-size: 20px;
     display: flex;
     justify-content: center;
 
@@ -255,6 +259,23 @@ onMounted(() => {
         max-width: 40%;
         text-align: center;
         color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.first-message {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    span {
+        max-width: 40%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
+        font-size: 20px;
     }
 }
 </style>
