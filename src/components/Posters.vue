@@ -150,27 +150,28 @@ onMounted(() => {
     <div class="poster-container">
         <div class="row">
             <div class="poster one" ref="one">
-                1
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09c9d437fede9d4afe052.jpg">
             </div>
             <div class="poster two" ref="two">
-                2
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
             </div>
             <div class="poster five" ref="five">
-                5
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/6594285949ed1bc8a13ae78f.jpg" alt="">
             </div>
             <div class="poster seven" ref="seven">
-                seven
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
             </div>
         </div>
         <div class="row">
             <div class="poster three" ref="three">
-                3
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
             </div>
             <div class="poster four" ref="four">
-                4
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65acdaa0b2292492b1bfd955.jpg" alt="">
             </div>
             <div class="poster six" ref="six">
-                six
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
+
             </div>
         </div>
         <div class="last-message">
@@ -188,47 +189,45 @@ onMounted(() => {
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
+
+    img {
+        aspect-ratio: calc(210 / 297);
+        height: 250px;
+    }
 }
 
 .one {
     z-index: 5;
     transform: rotate(-10deg);
-    background-color: aquamarine;
 }
 
 .two {
     z-index: 101;
     transform: rotate(6deg);
-    background-color: blue;
 }
 
 .three {
     z-index: 101;
-    background-color: darkblue;
     transform: rotate(-8deg);
 }
 
 .four {
     z-index: 102;
-    background-color: red;
     transform: rotate(8deg);
 }
 
 .five {
     z-index: 110;
-    background-color: red;
     transform: rotate(-8deg);
 }
 
 .six {
     z-index: 104;
-    background-color: hotpink;
     transform: rotate(4deg);
 }
 
 .seven {
     z-index: 109;
-    background-color: goldenrod;
     transform: rotate(-8deg);
 }
 
@@ -256,7 +255,7 @@ onMounted(() => {
     justify-content: center;
 
     span {
-        max-width: 40%;
+        max-width: 35%;
         text-align: center;
         color: rgba(0, 0, 0, 0.7);
         font-weight: 600;
