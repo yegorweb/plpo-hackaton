@@ -48,53 +48,91 @@ onMounted(() => {
     gsap.registerPlugin(MotionPathPlugin);
 
     let tl = gsap.timeline()
+    /**
+     * 70% - образуют рамку для текста, увеличились в 3.5 раза и opacity: 0.95
+     * 100% - расходятся прямолинейно, opacity: 0
+     *  */
     tl.to('.one', {
-        motionPath: {
-            // path: 'M2.49965 1.00003C-8.58625 208.317 348.639 216.895 1111.5 212',
-            path: [{ x: width.value / 4, y: height.value / 8 }, { x: width.value / 2, y: height.value / 4 }],
-            align: 'self',
-            curviness: 2,
+        keyframes: {
+            '25%': {
+                x: width.value / 4
+            },
+            '70%': {
+                x: width.value / 2.5, y: 100, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { x: width.value / 2, opacity: 0, },
+            easeEach: 'sine.out'
         },
-        scale: 3,
-        opacity: 0,
     }, '0');
-    // tl.to('.two', {
-    //     motionPath: {
-    //         // path: 'M32.5004 1.5C-100 345 242 258 197.5 740',
-    //         // path: [{ x: }]
-    //         align: 'self',
-    //         curviness: 2,
-    //     },
-    //     scale: 3,
-    //     opacity: 0
-    // }, '0');
-    // tl.to('.three', {
-    //     motionPath: { path: 'M1 590.5C528.186 406.338 672.84 286.149 756.5 0.5', align: 'self' },
-    //     scale: 3,
-    //     opacity: 0
-    // }, '0');
-    // tl.to('.four', {
-    //     motionPath: { path: 'M962.5 587.5C883.212 399.073 576.063 257.558 1.5 1.5', align: 'self' },
-    //     scale: 3,
-    //     opacity: 0
-    // }, '0')
-    // tl.to('.five', {
-    //     motionPath: { path: 'M546.5 2C968.329 418.51 317.348 380.629 0.5 457', align: 'self' },
-    //     scale: 3,
-    //     opacity: 0
-    // }, '0')
-    // tl.to('.six', {
-    //     motionPath: { path: 'M304 1018.5C149 986 186.5 407.5 2 1.5', align: 'self' },
-    //     scale: 3,
-    //     opacity: 0
-    // }, '0')
+    tl.to('.two', {
+        keyframes: {
+            '70%': {
+                y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
+            },
+            '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
+            easeEach: 'sine.out'
+
+        },
+    }, '0');
+    tl.to('.three', {
+        keyframes: {
+            '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
+            '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0');
+    tl.to('.four', {
+        keyframes: {
+            '70%': { x: -width.value / 3, y: -height.value / 1.5, scale: 3.5, opacity: 0.95 },
+            '100%': { x: -width.value / 2, y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.five', {
+        keyframes: {
+            '70%': {
+                y: height.value * 3 / 4, x: -200, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { y: height.value * 1.2, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.six', {
+        keyframes: {
+            '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
+            '100%': { y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.seven', {
+        keyframes: {
+            '70%': {
+                x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { x: -width.value / 2, opacity: 0, },
+            easeEach: 'sine.out'
+        },
+    }, '0');
+
+    tl.to('.last-message', {
+        keyframes: {
+            '25%': {
+                opacity: 0
+            },
+            '70%': {
+                opacity: 0.96
+            },
+            '100%': { opacity: 1, },
+            easeEach: 'sine.out'
+        },
+    }, '0')
 
     ScrollTrigger.create({
         animation: tl,
         trigger: '.poster-container',
         start: '-=25%',
         end: '+=140%',
-        scrub: 1.2,
+        scrub: 1.125,
         pin: true,
         anticipatePin: 1,
     })
@@ -129,6 +167,11 @@ onMounted(() => {
                 six
             </div>
         </div>
+        <div class="last-message">
+            <span>
+                Ваш постер попадёт в топ 10 лучших Глазова и вы станете самым крутым дизайнером планеты
+            </span>
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -136,7 +179,6 @@ onMounted(() => {
     aspect-ratio: calc(210 / 297);
     height: 250px;
     margin: 5px;
-    border-radius: 8px;
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
@@ -179,7 +221,7 @@ onMounted(() => {
 }
 
 .seven {
-    z-index: 111;
+    z-index: 109;
     background-color: goldenrod;
     transform: rotate(-8deg);
 }
@@ -196,6 +238,23 @@ onMounted(() => {
 
     .row {
         width: 100%;
+    }
+}
+
+.last-message {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+
+    span {
+        max-width: 40%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
     }
 }
 </style>
