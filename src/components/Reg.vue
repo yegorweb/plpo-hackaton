@@ -14,7 +14,6 @@ onMounted(() => {
         // endTrigger: '.footer',
         // pin: true,
         scrub: true,
-        markers: true,
         start: 'top 200px',
         end: '+=1300px',
         // pinSpacing: false
@@ -86,24 +85,26 @@ onMounted(() => {
                 r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
                 sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
                 r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-            r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-        </h3>
-    </v-col>
-</v-row></template>
-<style scoped>.sus {
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
+                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
+            </h3>
+        </v-col>
+    </v-row>
+</template>
+<style scoped>
+.sus {
     height: 1500px;
     background-color: blue;
 }</style>
