@@ -48,29 +48,91 @@ onMounted(() => {
     gsap.registerPlugin(MotionPathPlugin);
 
     let tl = gsap.timeline()
+    /**
+     * 70% - образуют рамку для текста, увеличились в 3.5 раза и opacity: 0.95
+     * 100% - расходятся прямолинейно, opacity: 0
+     *  */
     tl.to('.one', {
-        motionPath: { path: 'M573 260C240.69 222.261 104.213 172.094 1 1', align: 'self' },
-        scale: 3
+        keyframes: {
+            '25%': {
+                x: width.value / 4
+            },
+            '70%': {
+                x: width.value / 2.5, y: 100, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { x: width.value / 2, opacity: 0, },
+            easeEach: 'sine.out'
+        },
     }, '0');
     tl.to('.two', {
-        motionPath: { path: 'M1 260C333.31 222.261 469.787 172.094 573 1', align: 'self' },
-        scale: 3
+        keyframes: {
+            '70%': {
+                y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
+            },
+            '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
+            easeEach: 'sine.out'
+
+        },
     }, '0');
     tl.to('.three', {
-        motionPath: { path: 'M573 1C240.69 38.7389 104.213 88.9059 1 260', align: 'self' },
-        scale: 3
+        keyframes: {
+            '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
+            '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
     }, '0');
     tl.to('.four', {
-        motionPath: { path: 'M1 1C333.31 38.7389 469.787 88.9059 573 260', align: 'self' },
-        scale: 3
+        keyframes: {
+            '70%': { x: -width.value / 3, y: -height.value / 1.5, scale: 3.5, opacity: 0.95 },
+            '100%': { x: -width.value / 2, y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.five', {
+        keyframes: {
+            '70%': {
+                y: height.value * 3 / 4, x: -200, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { y: height.value * 1.2, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.six', {
+        keyframes: {
+            '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
+            '100%': { y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.seven', {
+        keyframes: {
+            '70%': {
+                x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { x: -width.value / 2, opacity: 0, },
+            easeEach: 'sine.out'
+        },
+    }, '0');
+
+    tl.to('.last-message', {
+        keyframes: {
+            '25%': {
+                opacity: 0
+            },
+            '70%': {
+                opacity: 0.96
+            },
+            '100%': { opacity: 1, },
+            easeEach: 'sine.out'
+        },
     }, '0')
 
     ScrollTrigger.create({
         animation: tl,
         trigger: '.poster-container',
         start: '-=25%',
-        end: '+=25%',
-        scrub: 1.5,
+        end: '+=140%',
+        scrub: 1.125,
         pin: true,
         anticipatePin: 1,
     })
@@ -79,31 +141,43 @@ onMounted(() => {
 })
 </script>
 <template>
+    <div class="first-message">
+        <span>
+            Готовы сделать нам постер за 20 тысяч рублей? Офигенная сделка, не правда ли? Вот бы кто хакатон по веб
+            разработке в Глазове провёл, мы бы там всех сделали.
+        </span>
+    </div>
     <div class="poster-container">
         <div class="row">
             <div class="poster one" ref="one">
-                1
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c99a09437fede9d4afea9c.jpg">
             </div>
             <div class="poster two" ref="two">
-                2
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
             </div>
             <div class="poster five" ref="five">
-                5
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/659a2b1897a5215f86585a4c.jpg" alt="">
             </div>
             <div class="poster seven" ref="seven">
-                seven
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
             </div>
         </div>
         <div class="row">
             <div class="poster three" ref="three">
-                3
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
             </div>
             <div class="poster four" ref="four">
-                4
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09981437fede9d4afdfff.jpg" alt="">
             </div>
             <div class="poster six" ref="six">
-                six
+                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
+
             </div>
+        </div>
+        <div class="last-message">
+            <span>
+                Ваш постер попадёт в топ 10 лучших Глазова и вы станете самым крутым дизайнером планеты
+            </span>
         </div>
     </div>
 </template>
@@ -112,51 +186,48 @@ onMounted(() => {
     aspect-ratio: calc(210 / 297);
     height: 250px;
     margin: 5px;
-    border-radius: 8px;
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
+
+    img {
+        aspect-ratio: calc(210 / 297);
+        height: 250px;
+    }
 }
 
 .one {
     z-index: 5;
     transform: rotate(-10deg);
-    background-color: aquamarine;
 }
 
 .two {
     z-index: 101;
     transform: rotate(6deg);
-    background-color: blue;
 }
 
 .three {
     z-index: 101;
-    background-color: darkblue;
     transform: rotate(-8deg);
 }
 
 .four {
     z-index: 102;
-    background-color: red;
     transform: rotate(8deg);
 }
 
 .five {
     z-index: 110;
-    background-color: red;
     transform: rotate(-8deg);
 }
 
 .six {
     z-index: 104;
-    background-color: hotpink;
     transform: rotate(4deg);
 }
 
 .seven {
-    z-index: 111;
-    background-color: goldenrod;
+    z-index: 109;
     transform: rotate(-8deg);
 }
 
@@ -172,8 +243,38 @@ onMounted(() => {
 
     .row {
         width: 100%;
-        // display: flex;
-        // justify-content: center;
+    }
+}
+
+.last-message {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+
+    span {
+        max-width: 30%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.first-message {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    span {
+        max-width: 40%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
+        font-size: 20px;
     }
 }
 </style>
