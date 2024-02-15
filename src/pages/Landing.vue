@@ -12,7 +12,7 @@ import ForWho from "../components/ForWho.vue";
 import Reg from "../components/Reg.vue";
 import AboutPLPO from "../components/AboutPLPO.vue";
 </script>
-<template ref="el" class="wrapper" style="overflow-x: hidden;">
+<template>
     <Start></Start>
     <Posters/>
     <Timeline></Timeline>
@@ -35,9 +35,14 @@ import AboutPLPO from "../components/AboutPLPO.vue";
     <Footer class="position_footer"></Footer>
 </template>
 <style scoped>
-.position_footer{
+/* .position_footer{
     z-index: -1;
-}
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+} */
 .rules-col{
     transform: rotate(-3deg);
 }

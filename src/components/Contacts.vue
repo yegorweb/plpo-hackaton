@@ -10,7 +10,7 @@
 </template>
 <style scoped>
 .rules {
-   
+    z-index: 1;
     height: 100px;
     background-color:darkslategrey;
 }

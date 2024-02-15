@@ -8,6 +8,7 @@
 </template>
 <style scoped>
 .rules {
+  z-index: 1;
   color: #EAEAC3;
   height: 100px;
     background-color:#F90007;

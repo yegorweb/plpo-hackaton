@@ -3,31 +3,27 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap работает только на onMounted
-// onMounted(() => {
-//   gsap.registerPlugin(ScrollTrigger);
-//   let foo = gsap.timeline();
-//   ScrollTrigger.create({
-//     animation: foo,
-//     trigger: ".plpo",
-//     // endTrigger: '.footer',
-//     scrub: true,
-//     start: "center 200px",
-//     end: "+=300px",
-//   });
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  let foo = gsap.timeline();
+  ScrollTrigger.create({
+    animation: foo,
+    trigger: ".plpo",
+    markers: true,
+    scrub: true,
+    start: "start+=200px center",
+    end: "center+=500px center",
+  });
 
-//   foo
-//     .to(".footer", {
-//       duration: 2,
-//       y: -150,
-//       scaleY: 1.1,
-//     })
-//     .to(".footer", {
-//       duration: 1,
-//       y: 0,
-//       scaleY: 1,
-//     });
-// });
+  foo.to('.footer', {
+            duration: 10,
+            top:-300,
+        })
+        .to('.footer', {
+            duration: 10,
+            top:0
+        })
+});
 </script>
 <template>
   <div class="footer">
@@ -39,11 +35,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 </template>
 <style scoped>
 .footer {
-  position: absolute;
+    z-index: -1;
+    position: relative;
+    top: -300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
   height: 300px;
-  width: 80%;
+  width: 100%;
   background-color: olive;
-  bottom: 300px;
-  right: 100px;
 }
 </style>
