@@ -2,14 +2,14 @@
 
 </script>
 <template>
-    <v-row class="contacts">
+    <v-row class="sponsors">
         <v-col>
         Контакты
         </v-col>
     </v-row>
 </template>
 <style scoped>
-.contacts {
+.sponsors {
     z-index: 1;
     height: 100px;
     background-color:darkslategrey;

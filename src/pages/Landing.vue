@@ -5,7 +5,7 @@ import Posters from '../components/Posters.vue'
 import PrizeFund from "../components/PrizeFund.vue";
 import Criteries from "../components/Criteries.vue";
 import Rules from "../components/Rules.vue";
-import Contacts from "../components/Contacts.vue";
+import Sponsors from "../components/Sponsors.vue";
 import FAQ from "../components/FAQ.vue";
 import Footer from "../components/Footer.vue";
 import ForWho from "../components/ForWho.vue";
@@ -27,7 +27,7 @@ import AboutPLPO from "../components/AboutPLPO.vue";
     </v-row>
 
 
-    <Contacts></Contacts>
+    <Sponsors></Sponsors>
     <FAQ></FAQ>
     <ForWho></ForWho>
     <Reg></Reg>
