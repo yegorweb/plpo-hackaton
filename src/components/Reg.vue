@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useRender } from 'vue-email'
 import RegTemplate from '../components/email-templates/RegTemplate.vue';
@@ -57,72 +57,15 @@ onMounted(() => {
 </script>
 <template>
     <v-row class="d-flex justify-center">
-        <v-col cols='4'>
+        <v-col class="my-8" cols="10" sm="6" md="4">
             <h1>Регистрация</h1>
-            <v-form class="mt-2">
+            <v-form class="mt-3">
                 <v-text-field v-model="name" label="Имя Фамилия"></v-text-field>
                 <v-text-field v-model="phone" label="номер телефона"></v-text-field>
-                <v-btn @click="reg()" class="btn btn-lg btn-dark btn-block">отправить</v-btn>
+                <v-btn variant="outlined" @click="reg()">отправить</v-btn>
             </v-form>
-
-            Зарегистрируйся сейчас, иначе
-            <h3>
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-                sdghasuidgasuidgsuidgasasydgyasdgyausdguaysysysysysysysysysysysysysysgfy8egq8fbg9quefbhqueifueb8yfg2v8
-                r24gr2 y84rgv2y8 r82 46rt2468rtx27 r823 r823t8tx2rt823 r8 23rt87
-            </h3>
         </v-col>
     </v-row>
 </template>
 <style scoped>
-.sus {
-    height: 1500px;
-    background-color: blue;
-}</style>
+</style>
