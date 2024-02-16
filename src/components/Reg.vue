@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import axios from 'axios'
 import { useRender } from 'vue-email'
 import RegTemplate from '../components/email-templates/RegTemplate.vue';
@@ -22,38 +22,38 @@ async function reg() {
 
 
 // gsap работает только на onMounted
-onMounted(() => {
+// onMounted(() => {
 
-    gsap.registerPlugin(ScrollTrigger);
-    let tl = gsap.timeline()
-    ScrollTrigger.create({
-        animation: tl,
-        trigger: '.sus',
-        // endTrigger: '.footer',
-        // pin: true,
-        scrub: true,
-        start: 'top 200px',
-        end: '+=1300px',
-        // pinSpacing: false
-    })
+//     gsap.registerPlugin(ScrollTrigger);
+//     let tl = gsap.timeline()
+//     ScrollTrigger.create({
+//         animation: tl,
+//         trigger: '.sus',
+//         // endTrigger: '.footer',
+//         // pin: true,
+//         scrub: true,
+//         start: 'top 200px',
+//         end: '+=1300px',
+//         // pinSpacing: false
+//     })
 
-    tl.to('.sus', {
-        backgroundColor: "#28a92b",
-        ease: "none",
-        duration: 5,
-        scale: 1.2
-    })
-        .to('.sus', {
-            backgroundColor: "#ffffff",
-            duration: 2,
-        })
-        .to('.sus', {
-            backgroundColor: "#ffffff",
-            ease: "none",
-            duration: 2,
-            scale: 0.95
-        })
-})
+//     tl.to('.sus', {
+//         backgroundColor: "#28a92b",
+//         ease: "none",
+//         duration: 5,
+//         scale: 1.2
+//     })
+//         .to('.sus', {
+//             backgroundColor: "#ffffff",
+//             duration: 2,
+//         })
+//         .to('.sus', {
+//             backgroundColor: "#ffffff",
+//             ease: "none",
+//             duration: 2,
+//             scale: 0.95
+//         })
+// })
 </script>
 <template>
     <v-row class="d-flex justify-center">
