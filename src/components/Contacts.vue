@@ -2,8 +2,16 @@
 
 </script>
 <template>
-<v-row>
-<v-col></v-col></v-row>
+    <v-row class="rules">
+        <v-col>
+        Контакты
+        </v-col>
+    </v-row>
 </template>
 <style scoped>
+.rules {
+   
+    height: 100px;
+    background-color:darkslategrey;
+}
 </style>

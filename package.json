@@ -9,7 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.6.7",
+=======
+    "@vueuse/core": "^10.7.2",
+    "gsap": "^3.12.5",
+    "@vueuse/core": "^10.7.2",
+    "gsap": "^3.12.5",
+>>>>>>> origin/master
     "sass": "^1.70.0",
     "vue": "^3.3.11",
     "vue-email": "^0.8.8",

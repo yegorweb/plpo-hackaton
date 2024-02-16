@@ -2,10 +2,16 @@
 
 </script>
 <template>
-    <v-row>
-        <v-col>
-            dfsfds
-        </v-col>
-    </v-row>
+    <div class="footer">
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+            <h1>Футер</h1>
+        </div>
 </template>
-<style scoped></style>
+<style scoped>
+.footer {
+    height: 300px;
+    background-color:olive;
+}
+</style>

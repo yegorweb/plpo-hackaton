@@ -2,10 +2,14 @@
 
 </script>
 <template>
-    <v-row>
-        <v-col>
-            dfsfds
-        </v-col>
-    </v-row>
+   <div class="rules">
+        <h1 class="text-center">Критерии</h1>
+    </div>
 </template>
-<style scoped></style>
+<style scoped>
+.rules {
+  color: #EAEAC3;
+  height: 100px;
+    background-color:#F90007;
+}
+</style>
