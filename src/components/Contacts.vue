@@ -2,14 +2,14 @@
 
 </script>
 <template>
-    <v-row class="rules">
+    <v-row class="contacts">
         <v-col>
         Контакты
         </v-col>
     </v-row>
 </template>
 <style scoped>
-.rules {
+.contacts {
     z-index: 1;
     height: 100px;
     background-color:darkslategrey;

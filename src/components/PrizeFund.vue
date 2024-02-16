@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <v-row class="rules">
+    <v-row class="prize_fund">
         <v-col class="d-flex justify-center align-center">
             <h1>Призы</h1>
         </v-col>
@@ -31,7 +31,7 @@
     </v-row>
 </template>
 <style scoped>
-.rules {
+.prize_fund {
 
     background-color: wheat;
 }

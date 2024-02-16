@@ -2,12 +2,12 @@
 
 </script>
 <template>
-   <div class="rules">
+   <div class="criteries">
         <h1 class="text-center">Критерии</h1>
     </div>
 </template>
 <style scoped>
-.rules {
+.criteries {
   z-index: 1;
   color: #EAEAC3;
   height: 100px;

@@ -3,7 +3,7 @@ import StartSvgImg from "../svg/StartSvgImg.vue";
 </script>
 
 <template>
-  <v-row>
+  <v-row class="start">
     <v-col cols="12" sm="10" md="8" lg="6">
         <svg width="100%" viewBox="0 0 928 867" fill="none" xmlns="http://www.w3.org/2000/svg" id="start-box">
           <path id="start-decor-1" d="M-174.514 -98.5028L-159.768 -181L429.013 139.343L-174.514 -98.5028Z" fill="#FD0000"/>
@@ -28,7 +28,7 @@ import StartSvgImg from "../svg/StartSvgImg.vue";
     </v-col>
   </v-row>
 
-  <div class="btns-container">
+  <div class="btns-container start">
     <div class="btn">
       sdfdsf
     </div>
@@ -51,6 +51,9 @@ import StartSvgImg from "../svg/StartSvgImg.vue";
 </template>
 
 <style scoped>
+.start{
+  z-index: 3;
+}
 .btns-container {
   position: absolute;
   right: 70px;

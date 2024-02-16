@@ -9,19 +9,15 @@ onMounted(() => {
   ScrollTrigger.create({
     animation: foo,
     trigger: ".plpo",
-    markers: true,
     scrub: true,
-    start: "start+=200px center",
-    end: "center+=500px center",
+    // markers: true,
+    start: "start center",
+    end: "center center",
   });
 
   foo.to('.footer', {
             duration: 10,
-            top:-300,
-        })
-        .to('.footer', {
-            duration: 10,
-            top:0
+            opacity:1
         })
 });
 </script>
@@ -34,15 +30,14 @@ onMounted(() => {
   </div>
 </template>
 <style scoped>
-.footer {
+.footer{
     z-index: -1;
-    position: relative;
-    top: -300px;
-    left: 0;
-    right: 0;
+    position:fixed;
+    opacity: 0;
     bottom: 0;
-  height: 300px;
-  width: 100%;
-  background-color: olive;
+    right: 0;
+    height: 20vh;
+    width: 100%;
+    background-color: lightgreen;
 }
 </style>
