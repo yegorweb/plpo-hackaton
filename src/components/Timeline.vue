@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-  <div class="d-flex align-center flex-column pa-8">
+  <div class="d-flex align-center flex-column pa-8 timeline">
     <h1 class="text-center">Расписание</h1>
     <v-divider :thickness="10" color="#F90007"  class="border-opacity-100 w-100"></v-divider>
     <v-timeline side="end" align="start">
@@ -84,5 +84,7 @@
 
 </template>
 <style scoped>
-
+.timeline{
+  z-index: 3;
+}
 </style>

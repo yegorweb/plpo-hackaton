@@ -41,6 +41,9 @@ import StartSvgImg from "../svg/StartSvgImg.vue";
 </template>
 
 <style scoped>
+.start{
+  z-index: 3;
+}
 .btns-container {
   position: absolute;
   right: 70px;
