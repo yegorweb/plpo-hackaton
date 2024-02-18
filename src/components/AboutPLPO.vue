@@ -2,11 +2,11 @@
 </script>
 <template>
     <div class="plpo" >
-            <div style="height: 100vh;">
+            <div class="h-screen">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Enim tortor at auctor urna nunc id cursus metus aliquam. Vel pretium lectus quam id
             </div>
-            <div style="height: 20vh;position:relative; z-index:-4;">
+            <div class="footer_overlay">
 
             </div>
     </div>
@@ -18,5 +18,10 @@
     z-index: 3;
     height: 100vh;
     background-color: bisque;
+}
+.footer_overlay{
+    height: 25vh;
+    position:relative;
+    z-index:-4;
 }
 </style>

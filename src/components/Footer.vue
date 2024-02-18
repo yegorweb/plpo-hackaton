@@ -12,35 +12,36 @@ onMounted(() => {
     scrub: true,
     // markers: true,
     start: "center center",
-    end: "center+=200px center",
+    end: "center+=100px center",
   });
 
-  foo.to('.footer', {
+  foo.to(".footer", {
     duration: 10,
     opacity: 1,
-  })
+  });
 });
 </script>
 <template>
-  <div class="footer" justify="center">
+  <div class="footer">
+
     <div class="">
       <h1 class="text-center">Plpo.ru</h1>
-      <h3 class="text-center">Калиннина, 2а</h3>
-      <div class="text-center">
-        тел.<a href="tel:+79068970429">89068970429</a>
-      </div>
+      <h3 class="text-center divider pb-4">Калиннина, 2а</h3>
     </div>
-    <div class="d-flex justify-space-between mt-8">
-      <div class="">
-        Сделано в Кубит
-      </div>
-      <div class="justify-end d-flex">
+      <div class="text-center mt-4">тел.<a href="tel:+79068970429">89068970429</a></div>
+
+    <div class="d-flex justify-space-around">
+
+      <div class="ml-8 footer_second_col">Сделано в Кубит</div>
+
+      <div class="justify-end d-flex footer_second_col mr-8">
         <a href="https://vk.com/qbitclub" class="mr-8">
-          <img src="../assets/Vk.png">
+          <img src="../assets/Vk.png" />
         </a>
         <a href="https://t.me/plporu">
-          <img src="../assets/Tg.png">
+          <img src="../assets/Tg.png" />
         </a>
+
       </div>
     </div>
   </div>
@@ -57,14 +58,22 @@ a:link {
 }
 
 .footer {
+  background-color: #ececc1;
   z-index: -1;
   margin: 0;
   position: fixed;
   opacity: 0;
   bottom: 0;
-  right: 0;
-  height: 20vh;
-  width: 100%;
-  background-color: wheat;
+  right: 0%;
+  left: 10%;
+  height: 25vh;
+  width: 80%;
+}
+.footer_second_col{
+  box-sizing: content-box;
+  width: 50%;
+}
+.divider{
+  border-bottom: 5px solid #000;
 }
 </style>
