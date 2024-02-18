@@ -19,13 +19,31 @@ onMounted(() => {
     duration: 10,
     opacity: 1,
   });
+
+  let bounce = gsap.timeline()
+  ScrollTrigger.create({
+    animation: bounce,
+    trigger: ".plpo",
+    markers: true,
+    start: "center+=100px center",
+    end: "+=100px bottom",
+
+  });
+  bounce.to(".main_text", {
+    duration: 0.5,
+    scale:1.1
+  }).to(".main_text", {
+    duration: 0.5,
+    scale:1
+  });
+
 });
 </script>
 <template>
   <div class="footer">
 
     <div class="">
-      <h1 class="text-center">Plpo.ru</h1>
+      <h1 class="text-center main_text">Plpo.ru</h1>
       <h3 class="text-center divider pb-4">Калиннина, 2а</h3>
     </div>
       <div class="text-center mt-4">тел.<a href="tel:+79068970429">89068970429</a></div>
