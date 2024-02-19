@@ -2,7 +2,7 @@
 </script>
 <template>
   <div class="d-flex align-center flex-column pa-8 timeline">
-    <h1 class="text-center">Расписание</h1>
+    <h1 class="text-center title">Расписание</h1>
     <v-divider :thickness="10" color="#F90007"  class="border-opacity-100 w-100"></v-divider>
     <v-timeline side="end" align="start">
     <v-timeline-item
@@ -11,7 +11,7 @@
     >
       <div class="d-flex">
         <strong class="me-4">11.00</strong>
-        <div>
+        <div class="">
           <strong>Регистрация</strong>
           <!-- <div class="text-caption">
             Mobile App
@@ -21,7 +21,7 @@
     </v-timeline-item>
 
     <v-timeline-item
-      dot-color="#676947"
+      dot-color="#000"
       size="small"
     >
       <div class="d-flex">
@@ -46,7 +46,7 @@
     </v-timeline-item>
 
     <v-timeline-item
-      dot-color="#676947"
+      dot-color="#000"
       size="small"
     >
       <div class="d-flex">
@@ -68,7 +68,7 @@
       </div>
     </v-timeline-item>
     <v-timeline-item
-      dot-color="#676947"
+      dot-color="#000"
       size="small"
     >
       <div class="d-flex">
@@ -85,6 +85,12 @@
 </template>
 <style scoped>
 .timeline{
-  z-index: 3;
+  background: #EAEAC3;
+}
+.title {
+  font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
+
+    text-transform: uppercase;
+    font-weight: 600;
 }
 </style>

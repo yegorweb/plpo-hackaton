@@ -1,20 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&family=Oswald:wght@200;300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;900&family=Oswald:wght@200;300;500;700&display=swap");
 
-@keyframes body-color {
-    from {
-        background: #cecea4;
-    }
-    to {
-        background: #EAEAC3;
-    }
+// @keyframes body-color {
+//     from {
+//         background: #cecea4;
+//     }
+//     to {
+//         background: #EAEAC3;
+//     }
+// }
+
+body {
+  font-family: "Golos Text", sans-serif;
+  background: #eaeac3;
+  margin: 0;
+  // font-family: 'Oswald', sans-serif;
 }
+// #app {
+//   background: #eaeac3;
+// }
 
-body{
-    font-family: 'Golos Text', sans-serif;
-    // font-family: 'Oswald', sans-serif;
-    animation: body-color 1.4s ease-in-out;
-    background: #EAEAC3;
-    z-index: 3;
+::-webkit-scrollbar {
+  width: 0;
 }
-

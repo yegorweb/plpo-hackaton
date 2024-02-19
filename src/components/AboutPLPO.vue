@@ -1,22 +1,57 @@
 <script setup>
 </script>
 <template>
-    <div class="plpo" >
-            <div style="height: 100vh;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Enim tortor at auctor urna nunc id cursus metus aliquam. Vel pretium lectus quam id
+    <div class="plpo">
+        <h1 class="text-center title">Спонсоры</h1>
+        <div style="height: 25dvh; background:#EAEAC3; overflow: scroll;" class="d-flex align-center justify-md-center">
+            
+            <div>
+                <img src="../assets/bastion.jpg" alt="">
             </div>
-            <div style="height: 20vh;position:relative; z-index:-4;">
+            
+           
+            <div>
+                <img src="../assets/bk.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/plpo.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/qbit.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/giv.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/trik.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/pro.png" alt="">
+            </div>
 
-            </div>
+        </div>
+        <div style="height: 35dvh;">
+
+        </div>
+
+
     </div>
 </template>
 <style scoped>
 .plpo {
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 3;
-    height: 100vh;
-    background-color: bisque;
+
+    height: 65dvh;
+}
+
+img {
+    max-width: 150px;
+    margin: 10px;
+}
+
+.title {
+    font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
+    background: #EAEAC3;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 </style>
