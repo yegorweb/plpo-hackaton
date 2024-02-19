@@ -4,7 +4,12 @@
 <template>
     <div class="rules">
         <h1 class="text-center">Правила</h1>
-      
+      <p>Делаем афишу на месте</p>
+      <p>Афиша реального события или места</p>
+      <p>Можно взять логотипы и фото</p>
+      <p>Нельзя готовую графику и рисунки</p>
+      <p>Работаем 3 часа</p>
+      <p>От 16 лет</p>
         
  
         
@@ -13,10 +18,14 @@
 <style scoped>
 .rules {
  
-    height: 300px;
+    /* height: 300px; */
     color: #EAEAC3;
-    background-color: #000;
-  
+    background: #000;
+    font-size: clamp(0.75rem, 0.4821rem + 0.8571vw, 1.125rem);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5% 10% 10% 10%;
+   
 
 }
 h1{

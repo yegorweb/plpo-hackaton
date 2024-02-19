@@ -2,12 +2,15 @@
 </script>
 <template>
     <v-row class="d-flex justify-center reg">
-        <v-col cols='12' md="4" class="ma-8">
+        <v-col cols='12' md="4" class="ma-8 pa-8">
             <h1 class="text-center title">Регистрация</h1>
             <v-form>
                 <v-text-field name="name" label="Фамилия Имя"></v-text-field>
                 <v-text-field name="phone" label="Телефона"></v-text-field>
-                <v-btn type="submit" >отправить</v-btn>
+                <div class="d-flex justify-center">
+                    <v-btn type="submit"  color="#F90007"  >отправить</v-btn>
+                </div>
+                
             </v-form>
     </v-col>
 </v-row>
