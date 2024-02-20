@@ -1,14 +1,4 @@
 <script setup>
-import { onMounted } from 'vue';
-import { gsap } from "gsap"
-
-onMounted(() => {
-  var tl = gsap.timeline();
-  tl.to(".first", { x: -10 })
-  .to(".first", {duration:0.5, x:0 })
-
-  tween.restart();
-})
 </script>
 <template>
   <div class="d-flex align-center flex-column pa-8 timeline">

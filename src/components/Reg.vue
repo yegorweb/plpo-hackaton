@@ -18,52 +18,16 @@ async function reg() {
     phone.value = ''
     return $api.post(`/api/reg-nodemailer`,{emailHtml})
 };
-
-
-
-// gsap работает только на onMounted
-// onMounted(() => {
-
-//     gsap.registerPlugin(ScrollTrigger);
-//     let tl = gsap.timeline()
-//     ScrollTrigger.create({
-//         animation: tl,
-//         trigger: '.sus',
-//         // endTrigger: '.footer',
-//         // pin: true,
-//         scrub: true,
-//         start: 'top 200px',
-//         end: '+=1300px',
-//         // pinSpacing: false
-//     })
-
-//     tl.to('.sus', {
-//         backgroundColor: "#28a92b",
-//         ease: "none",
-//         duration: 5,
-//         scale: 1.2
-//     })
-//         .to('.sus', {
-//             backgroundColor: "#ffffff",
-//             duration: 2,
-//         })
-//         .to('.sus', {
-//             backgroundColor: "#ffffff",
-//             ease: "none",
-//             duration: 2,
-//             scale: 0.95
-//         })
-// })
 </script>
 <template>
     <v-row class="d-flex justify-center reg">
         <v-col cols='12' md="4" class="ma-8 pa-8">
             <h1 class="text-center title">Регистрация</h1>
             <v-form>
-                <v-text-field name="name" label="Фамилия Имя"></v-text-field>
-                <v-text-field name="phone" label="Телефон"></v-text-field>
+                <v-text-field name="name" v-model="name" label="Фамилия Имя"></v-text-field>
+                <v-text-field name="phone" v-model="phone" label="Телефон"></v-text-field>
                 <div class="d-flex justify-center">
-                    <v-btn type="submit"  color="#F90007" text-color="black" >отправить</v-btn>
+                    <v-btn type="submit" @click='reg()' color="#F90007" text-color="black" >отправить</v-btn>
                 </div>
                 
             </v-form>
