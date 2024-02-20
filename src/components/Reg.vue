@@ -6,9 +6,9 @@
             <h1 class="text-center title">Регистрация</h1>
             <v-form>
                 <v-text-field name="name" label="Фамилия Имя"></v-text-field>
-                <v-text-field name="phone" label="Телефона"></v-text-field>
+                <v-text-field name="phone" label="Телефон"></v-text-field>
                 <div class="d-flex justify-center">
-                    <v-btn type="submit"  color="#F90007"  >отправить</v-btn>
+                    <v-btn type="submit"  color="#F90007" text-color="black" >отправить</v-btn>
                 </div>
                 
             </v-form>
