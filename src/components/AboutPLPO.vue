@@ -40,7 +40,7 @@
 <style scoped>
 .plpo {
 
-    height: 65dvh;
+    height: 67dvh;
 }
 
 img {
