@@ -2,15 +2,15 @@
 
 </script>
 <template>
-    <v-row class="rules">
+    <v-row class="sponsors">
         <v-col>
         Контакты
         </v-col>
     </v-row>
 </template>
 <style scoped>
-.rules {
-   
+.sponsors {
+    z-index: 1;
     height: 100px;
     background-color:darkslategrey;
 }

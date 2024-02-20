@@ -1,16 +1,57 @@
 <script setup>
-
 </script>
 <template>
-    <v-row class="plpo">
-        <v-col>
-        ПЛПО
-        </v-col>
-    </v-row>
+    <div class="plpo">
+        <h1 class="text-center title">Спонсоры</h1>
+        <div style="height: 25dvh; background:#EAEAC3; overflow: scroll;" class="d-flex align-center justify-md-center">
+            
+            <div>
+                <img src="../assets/bastion.jpg" alt="">
+            </div>
+            
+           
+            <div>
+                <img src="../assets/bk.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/plpo.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/qbit.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/giv.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/trik.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/pro.png" alt="">
+            </div>
+
+        </div>
+        <div style="height: 35dvh;">
+
+        </div>
+
+
+    </div>
 </template>
 <style scoped>
 .plpo {
-    height: 100px;
-    background-color:burlywood;
+
+    height: 67dvh;
+}
+
+img {
+    max-width: 150px;
+    margin: 10px;
+}
+
+.title {
+    font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
+    background: #EAEAC3;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 </style>

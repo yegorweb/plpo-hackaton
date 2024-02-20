@@ -4,6 +4,10 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useWindowSize } from '@vueuse/core'
+import line from "../assets/line.svg"
+import circle from "../assets/circle.svg"
+import dark_trapezoid from "../assets/dark_trapezoid.svg"
+import red_triangle from "../assets/red_triangle.svg"
 
 const { width, height } = useWindowSize()
 
@@ -117,12 +121,15 @@ onMounted(() => {
     tl.to('.last-message', {
         keyframes: {
             '25%': {
-                opacity: 0
+                opacity: 0,
+                scale: 1,
             },
             '70%': {
-                opacity: 0.96
+                opacity: 0.96,
+                scale: 1.4,
+
             },
-            '100%': { opacity: 1, },
+            '100%': { opacity: 1, scale: 1, },
             easeEach: 'sine.out'
         },
     }, '0')
@@ -141,47 +148,65 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="first-message">
-        <span>
-            Готовы сделать нам постер за 20 тысяч рублей? Офигенная сделка, не правда ли? Вот бы кто хакатон по веб
-            разработке в Глазове провёл, мы бы там всех сделали.
-        </span>
-    </div>
-    <div class="poster-container">
-        <div class="row">
-            <div class="poster one" ref="one">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c99a09437fede9d4afea9c.jpg">
-            </div>
-            <div class="poster two" ref="two">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
-            </div>
-            <div class="poster five" ref="five">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/659a2b1897a5215f86585a4c.jpg" alt="">
-            </div>
-            <div class="poster seven" ref="seven">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
-            </div>
+    <div class="container">
+
+
+        <div class="first-message">
+
+            <h1>Создай <span>лу</span>чшую афишу <span>!</span> </h1>
+            <img :src="circle" alt="">
         </div>
-        <div class="row">
-            <div class="poster three" ref="three">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
+        <div class="poster-container">
+            <div class="row">
+                <div class="poster one" ref="one">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c99a09437fede9d4afea9c.jpg">
+                </div>
+                <div class="poster two" ref="two">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
+                </div>
+                <div class="poster five" ref="five">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/659a2b1897a5215f86585a4c.jpg" alt="">
+                </div>
+                <div class="poster seven" ref="seven">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
+                </div>
             </div>
-            <div class="poster four" ref="four">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09981437fede9d4afdfff.jpg" alt="">
-            </div>
-            <div class="poster six" ref="six">
-                <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
+            <div class="row">
+                <div class="poster three" ref="three">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
+                </div>
+                <div class="poster four" ref="four">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09981437fede9d4afdfff.jpg" alt="">
+                </div>
+                <div class="poster six" ref="six">
+                    <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
+                </div>
 
             </div>
-        </div>
-        <div class="last-message">
-            <span>
-                Ваш постер попадёт в топ 10 лучших Глазова и вы станете самым крутым дизайнером планеты
-            </span>
+            <div class="last-message">
+                <h1>Выиграй <span>приз!</span> </h1>
+                <img :src="line" alt="" class="line">
+                <img :src="dark_trapezoid" alt="" class="dark_trapezoid">
+                <img :src="red_triangle" alt="" class="red_triangle">
+
+            </div>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
+.container {
+    background: #EAEAC3;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .poster {
     aspect-ratio: calc(210 / 297);
     height: 250px;
@@ -249,18 +274,47 @@ onMounted(() => {
 .last-message {
     opacity: 0;
     width: 100%;
-    position: absolute;
-    top: 25%;
+    height: 50dvh;
+    position: relative;
+
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    span {
-        max-width: 30%;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.7);
+    h1 {
+        font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
+        padding: 10px;
+        color: #EAEAC3;
+        background: black;
+        text-transform: uppercase;
         font-weight: 600;
-        font-size: 20px;
+
+        span {
+            color: #F90007;
+        }
     }
+
+    .line {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 20%;
+    }
+
+    .red_triangle {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        width: 20%;
+    }
+
+    .dark_trapezoid {
+        position: absolute;
+        bottom: -30%;
+        left: 50%;
+        width: 20%;
+    }
+
 }
 
 .first-message {
@@ -268,13 +322,29 @@ onMounted(() => {
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
+    position: relative;
 
-    span {
-        max-width: 40%;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.7);
+    transform: rotate(-1deg);
+
+    h1 {
+        font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
+        padding: 10px;
+        color: #EAEAC3;
+        background: black;
+        text-transform: uppercase;
         font-weight: 600;
-        font-size: 20px;
+
+        span {
+            color: #F90007;
+        }
     }
-}
-</style>
+
+    img {
+        position: absolute;
+        left: 10%;
+        bottom: 0%;
+        width: 5%;
+    }
+
+
+}</style>
