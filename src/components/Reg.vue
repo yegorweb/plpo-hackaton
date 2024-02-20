@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <v-row class="d-flex justify-center reg">
+    <v-row class="d-flex justify-center reg" id="reg">
         <v-col cols='12' md="4" class="ma-8 pa-8">
             <h1 class="text-center title">Регистрация</h1>
             <v-form>

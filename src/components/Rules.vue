@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="rules">
+    <div class="rules" id="rules">
         <h1 class="text-center">Правила</h1>
       <p>Делаем афишу на месте</p>
       <p>Афиша реального события или места</p>
