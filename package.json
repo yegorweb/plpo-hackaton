@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.7.2",
+    "axios": "^1.6.7",
     "gsap": "^3.12.5",
     "sass": "^1.70.0",
     "vue": "^3.3.11",
+    "vue-email": "^0.8.8",
     "vuetify": "^3.5.2"
   },
   "devDependencies": {
