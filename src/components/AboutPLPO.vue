@@ -1,24 +1,42 @@
 <script setup>
-gsap.from(".sponsor", {
-  duration: 2,
-  scale: 0.5, 
-  opacity: 0, 
-  delay: 0.5, 
-  stagger: 0.2,
-  ease: "elastic", 
-});
+import { onMounted, watch, ref } from "vue";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-document.querySelectorAll(".sponsor").forEach(function(sponsor) {
-    sponsor.addEventListener("click", function() {
-    gsap.to(".sponsor", {
-      duration: 0.5, 
-      opacity: 0, 
-      y: -100, 
+onMounted(() => {
+gsap.registerPlugin(ScrollTrigger);
+
+let tl=gsap.timeline()
+
+ScrollTrigger.create({
+        animation: tl,
+        trigger: '.plpo',
+        start: 'center bottom',
+    })
+
+    tl.to(".sponsor", {
+      duration: 1.5, 
+      y: -15, 
       stagger: 0.2,
-      ease: "back.in"
-    });
-  });
-});
+      backgroundColor:"#EAEAC3",
+    }, 1)
+    tl.to(".sponsor", {
+      duration: 1.5, 
+      y: 0, 
+      stagger: 0.2,
+      backgroundColor:"#EAEAC3",
+    },"-=1")
+// document.querySelectorAll(".sponsor").forEach(function(sponsor) {
+//   sponsor.addEventListener("click", function() {
+//     gsap.to(".sponsor", {
+//       duration: 0.5, 
+//       opacity: 0, 
+//       y: -100, 
+//       stagger: 0.1,
+//     });
+//   });
+// });
+})
 </script>
 <template>
     <div class="plpo">
@@ -78,5 +96,8 @@ img {
     height: 25vh;
     position:relative;
     z-index:-4;
+}
+.sponsor{
+    box-shadow: 1px;
 }
 </style>
