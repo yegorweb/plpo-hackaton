@@ -29,28 +29,28 @@ let tl=gsap.timeline({repeat: -1,})
         <h1 class="text-center title">Спонсоры</h1>
         <div style="height: 25dvh; background:#EAEAC3; overflow: scroll;" class="d-flex align-center justify-md-center">
             
-            <div class="sponsor">
+            <a href="https://vk.com/bastion18" target="_blank" class="sponsor">
                 <img src="../assets/bastion.jpg" alt="">
-            </div>
+            </a>
            
-            <div class="sponsor">
+            <a href="https://vk.com/zooglazov" target="_blank" class="sponsor">
                 <img src="../assets/bk.png" alt="">
-            </div>
-            <div class="sponsor">
+            </a>
+            <a href="https://plpo.ru/posters" target="_blank" class="sponsor">
                 <img src="../assets/plpo.png" alt="">
-            </div>
-            <div class="sponsor">
+            </a>
+            <a href="https://qbit-club.com/#/" target="_blank" class="sponsor">
                 <img src="../assets/qbit.png" alt="">
-            </div>
-            <div class="sponsor">
+            </a>
+            <a href="https://gorodaivesi.ru/" target="_blank" class="sponsor">
                 <img src="../assets/giv.png" alt="">
-            </div>
-            <div class="sponsor">
+            </a>
+            <a href="https://vk.com/grif_trik" target="_blank" class="sponsor">
                 <img src="../assets/trik.png" alt="">
-            </div>
-            <div class="sponsor">
+            </a>
+            <a href="https://proviant.store/#/hello" target="_blank" class="sponsor">
                 <img src="../assets/pro.png" alt="">
-            </div>
+            </a>
 
         </div>
         <div style="height: 35dvh;">
