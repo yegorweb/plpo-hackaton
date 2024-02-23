@@ -1,5 +1,19 @@
 <script setup>
+import { onMounted, watch, ref } from "vue";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+onMounted(() => {
+    gsap.registerPlugin(ScrollTrigger) 
+    gsap.from(".criteries", {
+    scrollTrigger: {
+      trigger: ".criteries",
+    },
+    x: 100,
+    y:-10
+  });
+
+})
 </script>
 <template>
   <div class="criteries">

@@ -1,13 +1,34 @@
 <script setup>
+import { onMounted } from "vue";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+onMounted(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.from(".titlePrize", {
+        scrollTrigger: {
+            trigger: ".titlePrize",
+        }, 
+         y: -20, 
+         x: -100
+    });
+    gsap.from(".fund", {
+        scrollTrigger: {
+            trigger: ".fund",
+        }, 
+         y: 20, 
+         x: 100
+    });
+})
 
 </script>
 <template>
     <v-row class="prize_fund">
-        <v-col class="d-flex  align-center justify-end" cols="12" md="6"
-         >
-            <h1 class="title">Призы</h1>
+        <v-col class="d-flex  align-center justify-end" cols="12" md="6">
+            <h1 class="titlePrize">Призы</h1>
         </v-col>
-        <v-col  cols="12" md="6">
+        <v-col cols="12" md="6">
 
             <div class="fund">
                 <div class="red">
@@ -29,13 +50,15 @@
     </v-row>
 </template>
 <style scoped>
-.prize_fund{
+.prize_fund {
     background: #EAEAC3;
 }
+
 .red {
     color: #F90007;
 }
-.title {
+
+.titlePrize {
     clip-path: polygon(0 100%, 0 0, 100% 50%);
     background-color: #F90007;
     width: 70%;
@@ -45,10 +68,11 @@
     text-transform: uppercase;
     font-weight: 600;
 }
-.fund{
+
+.fund {
     clip-path: polygon(7% 0, 75% 0, 100% 100%, 0% 100%);
     background-color: #000;
-  
+
     padding: 20px;
     padding-left: 20%;
     font-size: clamp(0.75rem, 0.4821rem + 0.8571vw, 1.125rem);

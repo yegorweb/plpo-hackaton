@@ -1,4 +1,18 @@
 <script setup>
+import { onMounted, watch, ref } from "vue";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.from(".rules", {
+    scrollTrigger: {
+      trigger: ".rules",
+    },
+    x: -50,
+  });
+
+})
 
 </script>
 <template>
@@ -17,21 +31,22 @@
 </template>
 <style scoped>
 .rules {
- 
-    /* height: 300px; */
-    color: #EAEAC3;
-    background: #000;
-    font-size: clamp(0.75rem, 0.4821rem + 0.8571vw, 1.125rem);
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 5% 10% 10% 10%;
-   
+
+  /* height: 300px; */
+  color: #EAEAC3;
+  background: #000;
+  font-size: clamp(0.75rem, 0.4821rem + 0.8571vw, 1.125rem);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5% 10% 10% 10%;
+
 
 }
-h1{
+
+h1 {
   font-size: clamp(1.25rem, 0.7143rem + 1.7143vw, 2rem);
-    color: #EAEAC3;
-    text-transform: uppercase;
-    font-weight: 600;
+  color: #EAEAC3;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 </style>
