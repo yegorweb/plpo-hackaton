@@ -42,14 +42,13 @@ function placePosters(h = height.value, w = width.value) {
     // seven.value.style['left'] = String(w / 2 - cardWidth + 20) + 'px'
 }
 
-watch([width, height], ([newWidth, newHeight]) => {
-    placePosters(newHeight, newWidth)
-})
 
 // gsap работает только на onMounted
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(MotionPathPlugin);
+
+    placePosters(height, width)
 
     let tl = gsap.timeline()
     /**
@@ -161,26 +160,26 @@ onMounted(() => {
                 <div class="poster one" ref="one">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c99a09437fede9d4afea9c.jpg">
                 </div>
-                <div class="poster two" ref="two">
+                <!-- <div class="poster two" ref="two">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
-                </div>
+                </div> -->
                 <div class="poster five" ref="five">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/659a2b1897a5215f86585a4c.jpg" alt="">
                 </div>
-                <div class="poster seven" ref="seven">
+                <!-- <div class="poster seven" ref="seven">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
-                </div>
+                </div> -->
             </div>
             <div class="row">
-                <div class="poster three" ref="three">
+                <!-- <div class="poster three" ref="three">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
-                </div>
+                </div> -->
                 <div class="poster four" ref="four">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09981437fede9d4afdfff.jpg" alt="">
                 </div>
-                <div class="poster six" ref="six">
+                <!-- <div class="poster six" ref="six">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
-                </div>
+                </div> -->
 
             </div>
             <div class="last-message">
