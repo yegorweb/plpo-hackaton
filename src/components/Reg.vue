@@ -6,7 +6,7 @@ import RegTemplate from '../components/email-templates/RegTemplate.vue';
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: 'http://localhost:3031'
+    baseURL: 'https://api.plpo.ru'
 })
 
 let name = ref()
@@ -27,7 +27,7 @@ async function reg() {
                 <v-text-field name="name" v-model="name" label="Фамилия Имя"></v-text-field>
                 <v-text-field name="phone" v-model="phone" label="Телефон"></v-text-field>
                 <div class="d-flex justify-center">
-                    <v-btn type="submit" @click='reg()' color="#F90007" text-color="black" >отправить</v-btn>
+                    <v-btn  @click='reg()' color="#F90007" text-color="black" >отправить</v-btn>
                 </div>
                 
             </v-form>

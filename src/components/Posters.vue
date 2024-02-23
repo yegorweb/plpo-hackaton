@@ -46,7 +46,7 @@ function placePosters(h = height.value, w = width.value) {
 // gsap работает только на onMounted
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(MotionPathPlugin);
+    // gsap.registerPlugin(MotionPathPlugin);
 
     // placePosters(height, width)
 
