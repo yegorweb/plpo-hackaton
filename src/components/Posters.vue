@@ -133,8 +133,9 @@ onMounted(() => {
     ScrollTrigger.create({
         animation: tl,
         trigger: '.poster-container',
-        start: '-=25%',
-        end: '+=140%',
+        start: '-=30%',
+        end: '+=50%',
+        markers:true,
         scrub: true,
         pin: true,
         anticipatePin: 1,
@@ -260,7 +261,7 @@ img {
 .poster-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 75vh;
 
     .row {
         width: 100%;
