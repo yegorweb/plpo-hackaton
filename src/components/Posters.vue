@@ -135,7 +135,6 @@ onMounted(() => {
         trigger: '.poster-container',
         start: '-=30%',
         end: '+=50%',
-        markers:true,
         scrub: true,
         pin: true,
         anticipatePin: 1,
@@ -296,23 +295,26 @@ img {
 
     .line {
         position: absolute;
-        top: 10%;
-        right: 10%;
-        width: 20%;
+        top: 35px;
+        right: 35px;
+        width: 15%;
     }
 
     .red_triangle {
         position: absolute;
-        bottom: 10%;
-        left: 10%;
-        width: 20%;
+        bottom: 35px;
+        left: 35px;
+        width: 15%;
     }
 
     .dark_trapezoid {
         position: absolute;
-        bottom: -30%;
-        left: 50%;
-        width: 20%;
+        bottom: -35px;
+        right: 35px;
+        width: 15%;
+    }
+    .circle {
+        width: 15%;
     }
 
 }
