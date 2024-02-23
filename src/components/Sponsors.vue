@@ -4,7 +4,7 @@
 <template>
     <v-row class="sponsors">
         <v-col>
-        Контакты
+        Контакты в AboutPLPO
         </v-col>
     </v-row>
 </template>
