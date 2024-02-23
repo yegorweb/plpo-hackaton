@@ -154,7 +154,7 @@ onMounted(() => {
         <div class="first-message">
 
             <h1>Создай <span>лу</span>чшую афишу <span>!</span> </h1>
-            <img :src="circle" alt="">
+            <!-- <img :src="circle" alt=""> -->
         </div>
         <div class="poster-container">
             <div class="row">
@@ -185,9 +185,9 @@ onMounted(() => {
             </div>
             <div class="last-message">
                 <h1>Выиграй <span>приз!</span> </h1>
-                <img :src="line" alt="" class="line">
+                <!-- <img :src="line" alt="" class="line">
                 <img :src="dark_trapezoid" alt="" class="dark_trapezoid">
-                <img :src="red_triangle" alt="" class="red_triangle">
+                <img :src="red_triangle" alt="" class="red_triangle"> -->
 
             </div>
         </div>
