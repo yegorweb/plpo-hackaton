@@ -8,6 +8,7 @@ onMounted(() => {
   gsap.from(".rules", {
     scrollTrigger: {
       trigger: ".rules",
+      start:'top center',
     },
     x: -50,
   });

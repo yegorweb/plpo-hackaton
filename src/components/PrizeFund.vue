@@ -9,6 +9,7 @@ onMounted(() => {
     gsap.from(".titlePrize", {
         scrollTrigger: {
             trigger: ".titlePrize",
+            start:'top center',
         }, 
          y: -20, 
          x: -100
@@ -16,6 +17,7 @@ onMounted(() => {
     gsap.from(".fund", {
         scrollTrigger: {
             trigger: ".fund",
+            start:'top center',
         }, 
          y: 20, 
          x: 100

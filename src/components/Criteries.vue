@@ -8,6 +8,7 @@ onMounted(() => {
     gsap.from(".criteries", {
     scrollTrigger: {
       trigger: ".criteries",
+      start:'top center',
     },
     x: 100,
     y:-10
