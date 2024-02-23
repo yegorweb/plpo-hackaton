@@ -59,7 +59,7 @@ let zindex = computed(() => {
 
 .footer {
 
-    height: 35dvh;
+    height: 200px;
     position: fixed;
     bottom: 0;
     right: 0;

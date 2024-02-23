@@ -27,7 +27,7 @@ let tl=gsap.timeline({repeat: -1,})
 <template>
     <div class="plpo">
         <h1 class="text-center title">Спонсоры</h1>
-        <div style="height: 25dvh; background:#EAEAC3; overflow: scroll;" class="d-flex align-center justify-md-center">
+        <div style="height: 150px; background:#EAEAC3; overflow: scroll;" class="d-flex align-center justify-md-center">
             
             <a href="https://vk.com/bastion18" target="_blank" class="sponsor">
                 <img src="../assets/bastion.jpg" alt="">
@@ -53,7 +53,7 @@ let tl=gsap.timeline({repeat: -1,})
             </a>
 
         </div>
-        <div style="height: 35dvh;">
+        <div style="height: 200px;">
 
         </div>
 
@@ -63,7 +63,7 @@ let tl=gsap.timeline({repeat: -1,})
 <style scoped>
 .plpo {
 
-    height: 67dvh;
+    height: 400px;
 }
 
 img {
@@ -76,6 +76,7 @@ img {
     background: #EAEAC3;
     text-transform: uppercase;
     font-weight: 600;
+    height: 50px;
 }
 .footer_overlay{
     height: 25vh;

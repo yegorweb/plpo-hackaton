@@ -23,9 +23,9 @@ let hi = () => {
       </div>
       <div class="text-center">
         <a href="https://t.me/plporu" target="_blank">
-          <img class="ma-2" :src="telegram" alt=""></a>
+          <img class="ma-1" :src="telegram" alt=""></a>
 
-        <a href="https://vk.com/plporu" target="_blank"><img class="ma-2" :src="vk" alt=""></a>
+        <a href="https://vk.com/plporu" target="_blank"><img class="ma-1" :src="vk" alt=""></a>
 
       </div>
       <div class="text-center">
@@ -58,8 +58,8 @@ let hi = () => {
 </template>
 <style scoped>
 .site-url {
-
-  font-size: 80px;
+  line-height: 60px;
+  font-size: 50px;
   font-weight: bold;
   text-transform: uppercase;
   color: #F90007;
