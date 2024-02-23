@@ -24,10 +24,10 @@ function placePosters(h = height.value, w = width.value) {
     let cardWidth = 177
     one.value.style['left'] = String(w / 2 - cardWidth + 10) + 'px'
 
-    two.value.style['left'] = String(w / 2 + 10) + 'px'
+    // two.value.style['left'] = String(w / 2 + 10) + 'px'
 
-    three.value.style['top'] = String(60) + 'px'
-    three.value.style['left'] = String(w / 2 - cardWidth - 20) + 'px'
+    // three.value.style['top'] = String(60) + 'px'
+    // three.value.style['left'] = String(w / 2 - cardWidth - 20) + 'px'
 
     four.value.style['left'] = String(w / 2 + 10 + 10) + 'px'
     four.value.style['top'] = String(60) + 'px'
@@ -35,11 +35,11 @@ function placePosters(h = height.value, w = width.value) {
     five.value.style['top'] = String(125) + 'px'
     five.value.style['left'] = String(w / 2 - cardWidth - 20) + 'px'
 
-    six.value.style['left'] = String(w / 2 + 10) + 'px'
-    six.value.style['top'] = String(120) + 'px'
+    // six.value.style['left'] = String(w / 2 + 10) + 'px'
+    // six.value.style['top'] = String(120) + 'px'
 
-    seven.value.style['top'] = String(190) + 'px'
-    seven.value.style['left'] = String(w / 2 - cardWidth + 20) + 'px'
+    // seven.value.style['top'] = String(190) + 'px'
+    // seven.value.style['left'] = String(w / 2 - cardWidth + 20) + 'px'
 }
 
 watch([width, height], ([newWidth, newHeight]) => {
@@ -68,23 +68,23 @@ onMounted(() => {
             easeEach: 'sine.out'
         },
     }, '0');
-    tl.to('.two', {
-        keyframes: {
-            '70%': {
-                y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
-            },
-            '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
-            easeEach: 'sine.out'
+    // tl.to('.two', {
+    //     keyframes: {
+    //         '70%': {
+    //             y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
+    //         },
+    //         '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
+    //         easeEach: 'sine.out'
 
-        },
-    }, '0');
-    tl.to('.three', {
-        keyframes: {
-            '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
-            '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
-            easeEach: 'sine.out'
-        },
-    }, '0');
+    //     },
+    // }, '0');
+    // tl.to('.three', {
+    //     keyframes: {
+    //         '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
+    //         '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
+    //         easeEach: 'sine.out'
+    //     },
+    // }, '0');
     tl.to('.four', {
         keyframes: {
             '70%': { x: -width.value / 3, y: -height.value / 1.5, scale: 3.5, opacity: 0.95 },
@@ -101,22 +101,22 @@ onMounted(() => {
             easeEach: 'sine.out'
         },
     }, '0')
-    tl.to('.six', {
-        keyframes: {
-            '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
-            '100%': { y: -height.value, opacity: 0 },
-            easeEach: 'sine.out'
-        },
-    }, '0')
-    tl.to('.seven', {
-        keyframes: {
-            '70%': {
-                x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
-            },
-            '100%': { x: -width.value / 2, opacity: 0, },
-            easeEach: 'sine.out'
-        },
-    }, '0');
+    // tl.to('.six', {
+    //     keyframes: {
+    //         '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
+    //         '100%': { y: -height.value, opacity: 0 },
+    //         easeEach: 'sine.out'
+    //     },
+    // }, '0')
+    // tl.to('.seven', {
+    //     keyframes: {
+    //         '70%': {
+    //             x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
+    //         },
+    //         '100%': { x: -width.value / 2, opacity: 0, },
+    //         easeEach: 'sine.out'
+    //     },
+    // }, '0');
 
     tl.to('.last-message', {
         keyframes: {
