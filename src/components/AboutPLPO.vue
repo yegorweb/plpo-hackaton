@@ -6,36 +6,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
 gsap.registerPlugin(ScrollTrigger);
 
-let tl=gsap.timeline()
-
-ScrollTrigger.create({
-        animation: tl,
-        trigger: '.plpo',
-        start: 'center bottom',
-    })
-
+let tl=gsap.timeline({repeat: -1,})
     tl.to(".sponsor", {
-      duration: 1.5, 
       y: -15, 
-      stagger: 0.2,
-      backgroundColor:"#EAEAC3",
-    }, 1)
+      stagger: {amount:2},
+      scale:1.05,
+    })
     tl.to(".sponsor", {
-      duration: 1.5, 
+      y: 15, 
+      stagger: {amount:2},
+      scale:1.05,
+    },"<45%")
+    tl.to(".sponsor", { 
       y: 0, 
-      stagger: 0.2,
-      backgroundColor:"#EAEAC3",
-    },"-=1")
-// document.querySelectorAll(".sponsor").forEach(function(sponsor) {
-//   sponsor.addEventListener("click", function() {
-//     gsap.to(".sponsor", {
-//       duration: 0.5, 
-//       opacity: 0, 
-//       y: -100, 
-//       stagger: 0.1,
-//     });
-//   });
-// });
+      stagger: {amount:1},
+      scale:1,
+    },"<45%")
 })
 </script>
 <template>
@@ -46,7 +32,6 @@ ScrollTrigger.create({
             <div class="sponsor">
                 <img src="../assets/bastion.jpg" alt="">
             </div>
-            
            
             <div class="sponsor">
                 <img src="../assets/bk.png" alt="">
