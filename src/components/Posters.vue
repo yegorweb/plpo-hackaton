@@ -21,7 +21,7 @@ let seven = ref(null)
 
 function placePosters(h = height.value, w = width.value) {
     // вычисляется через aspectRatio/posterHeight
-    let cardWidth = 177
+    let cardWidth = 150
     one.value.style['left'] = String(w / 2 - cardWidth + 10) + 'px'
 
     // two.value.style['left'] = String(w / 2 + 10) + 'px'
@@ -48,7 +48,7 @@ onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(MotionPathPlugin);
 
-    placePosters(height, width)
+    // placePosters(height, width)
 
     let tl = gsap.timeline()
     /**
@@ -57,33 +57,30 @@ onMounted(() => {
      *  */
     tl.to('.one', {
         keyframes: {
-            '25%': {
-                x: width.value / 4
-            },
             '70%': {
-                x: width.value / 2.5, y: 100, opacity: 0.95, scale: 3.5,
+                x: width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
             },
             '100%': { x: width.value / 2, opacity: 0, },
             easeEach: 'sine.out'
         },
     }, '0');
-    // tl.to('.two', {
-    //     keyframes: {
-    //         '70%': {
-    //             y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
-    //         },
-    //         '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
-    //         easeEach: 'sine.out'
+    tl.to('.two', {
+        keyframes: {
+            '70%': {
+                y: height.value * 5 / 6, opacity: 0.95, x: width.value / 6, scale: 3.5,
+            },
+            '100%': { y: height.value * 1.2, x: width.value / 6, opacity: 0 },
+            easeEach: 'sine.out'
 
-    //     },
-    // }, '0');
-    // tl.to('.three', {
-    //     keyframes: {
-    //         '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
-    //         '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
-    //         easeEach: 'sine.out'
-    //     },
-    // }, '0');
+        },
+    }, '0');
+    tl.to('.three', {
+        keyframes: {
+            '70%': { x: width.value / 4, y: -height.value / 4 * 3, scale: 3.5, opacity: 0.95 },
+            '100%': { x: width.value / 3, y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0');
     tl.to('.four', {
         keyframes: {
             '70%': { x: -width.value / 3, y: -height.value / 1.5, scale: 3.5, opacity: 0.95 },
@@ -100,22 +97,22 @@ onMounted(() => {
             easeEach: 'sine.out'
         },
     }, '0')
-    // tl.to('.six', {
-    //     keyframes: {
-    //         '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
-    //         '100%': { y: -height.value, opacity: 0 },
-    //         easeEach: 'sine.out'
-    //     },
-    // }, '0')
-    // tl.to('.seven', {
-    //     keyframes: {
-    //         '70%': {
-    //             x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
-    //         },
-    //         '100%': { x: -width.value / 2, opacity: 0, },
-    //         easeEach: 'sine.out'
-    //     },
-    // }, '0');
+    tl.to('.six', {
+        keyframes: {
+            '70%': { y: -height.value / 4 * 3, scale: 3.5, opacity: 0.9 },
+            '100%': { y: -height.value, opacity: 0 },
+            easeEach: 'sine.out'
+        },
+    }, '0')
+    tl.to('.seven', {
+        keyframes: {
+            '70%': {
+                x: -width.value / 3.5, y: 100, opacity: 0.95, scale: 3.5,
+            },
+            '100%': { x: -width.value / 2, opacity: 0, },
+            easeEach: 'sine.out'
+        },
+    }, '0');
 
     tl.to('.last-message', {
         keyframes: {
@@ -143,7 +140,6 @@ onMounted(() => {
         anticipatePin: 1,
     })
 
-    placePosters()
 })
 </script>
 <template>
@@ -152,7 +148,7 @@ onMounted(() => {
 
         <div class="first-message">
 
-            <h1>Создай <span>лу</span>чшую афишу <span>!</span> </h1>
+            <h1>Создай <span>лу</span>чшую афишу <span>! {{ width }}</span> </h1>
             <!-- <img :src="circle" alt=""> -->
         </div>
         <div class="poster-container">
@@ -160,26 +156,26 @@ onMounted(() => {
                 <div class="poster one" ref="one">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c99a09437fede9d4afea9c.jpg">
                 </div>
-                <!-- <div class="poster two" ref="two">
+                <div class="poster two" ref="two">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c3b32e437fede9d4afe354.jpg">
-                </div> -->
+                </div>
                 <div class="poster five" ref="five">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/659a2b1897a5215f86585a4c.jpg" alt="">
                 </div>
-                <!-- <div class="poster seven" ref="seven">
+                <div class="poster seven" ref="seven">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65bbe5f904c877c4408d050f.jpg" alt="">
-                </div> -->
+                </div>
             </div>
             <div class="row">
-                <!-- <div class="poster three" ref="three">
+                <div class="poster three" ref="three">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65aa271a9bff79a9d86993b1.jpg">
-                </div> -->
+                </div>
                 <div class="poster four" ref="four">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65c09981437fede9d4afdfff.jpg" alt="">
                 </div>
-                <!-- <div class="poster six" ref="six">
+                <div class="poster six" ref="six">
                     <img src="https://goroda-img.storage.yandexcloud.net/plakat-city/65a926859bff79a9d869901a.jpg">
-                </div> -->
+                </div>
 
             </div>
             <div class="last-message">
@@ -195,6 +191,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .container {
     background: #EAEAC3;
+    position: relative;
 }
 
 img {
@@ -208,15 +205,15 @@ img {
 
 .poster {
     aspect-ratio: calc(210 / 297);
-    height: 250px;
+    height: 230px;
     margin: 5px;
     overflow-x: hidden;
     overflow-y: hidden;
     position: absolute;
-
+    top:15%;
     img {
         aspect-ratio: calc(210 / 297);
-        height: 250px;
+        height: 230px;
     }
 }
 
@@ -267,6 +264,9 @@ img {
 
     .row {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
