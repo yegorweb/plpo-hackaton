@@ -45,6 +45,7 @@ let zindex = computed(() => {
     <div style="position: relative;:">
         <AboutPLPO></AboutPLPO>
         <div ref="target"></div>
+        <div style="height:1px"></div>
         <Footer class="footer" :class='zindex'></Footer>
     </div>
 </template>
