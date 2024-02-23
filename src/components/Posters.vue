@@ -135,7 +135,7 @@ onMounted(() => {
         trigger: '.poster-container',
         start: '-=25%',
         end: '+=140%',
-        scrub: 1.125,
+        scrub: true,
         pin: true,
         anticipatePin: 1,
     })
